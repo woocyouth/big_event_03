@@ -30,3 +30,25 @@ html {
     height: 60px;
     background: url(/assets/images/login_title.png) no-repeat center;
 }
+
+.layui-form-item {
+    position: relative;
+    width: 80%;
+    margin: 12px auto;
+}
+
+.layui-input {
+    padding-left: 30px;
+}
+
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+}
