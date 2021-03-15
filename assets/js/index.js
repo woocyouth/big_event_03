@@ -1,15 +1,19 @@
 $(function () {
     getUserInfo();
+    $("#logout").on("click", function () {
+        localStorage.removeItem("my3Token");
+        location.href = "/login.html";
+    })
 })
 
 function getUserInfo() {
     $.ajax({
         url: '/my/userinfo',
-        headers: {
-            Authorization: localStorage.getItem("my3Token") || ""
-        },
+        // headers: {
+        //     Authorization: localStorage.getItem("my3Token") || ""
+        // },
         success: (res) => {
-            console.log(res);
+            // console.log(res);
             if (res.status != 0) {
                 layer.msg(res.message, {
                     icon: 5
